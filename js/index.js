@@ -31,7 +31,7 @@ $(function(){
     var now=0;
     var next=0;
     var flag=true;
-    var t=setInterval(wheel,2000);
+    var t=setInterval(wheel,3000);
     function wheel(){
         if(!flag){
             return;
@@ -42,7 +42,7 @@ $(function(){
             next=0;
         }
         $imgs.eq(next).css({left:$imgw});
-        $imgs.eq(now).animate({left:-$imgw},1000);
+        $imgs.eq(now).animate({left:-$imgw},800);
         $imgs.eq(next).animate({left:0},1000,function(){
             flag=true;
         });
@@ -65,13 +65,13 @@ $(function(){
         flag=false;
         if(now>indexLis){
             $imgs.eq(indexLis).css({left:-$imgw});
-            $imgs.eq(now).animate({left:$imgw},1000);
+            $imgs.eq(now).animate({left:$imgw},800);
         }
         if(now<indexLis){
             $imgs.eq(indexLis).css({left:$imgw});
-            $imgs.eq(now).animate({left:-$imgw},1000);
+            $imgs.eq(now).animate({left:-$imgw},800);
         }
-        $imgs.eq(indexLis).animate({left:0},1000,function(){
+        $imgs.eq(indexLis).animate({left:0},800,function(){
             flag=true;
         });
         $lis.removeClass("hot").eq(indexLis).addClass("hot");
@@ -93,8 +93,8 @@ $(function(){
             next=$imgs.length-1;
         }
         $imgs.eq(next).css({left:-$imgw});
-        $imgs.eq(now).animate({left:$imgw},1000);
-        $imgs.eq(next).animate({left:0},1000,function(){
+        $imgs.eq(now).animate({left:$imgw},800);
+        $imgs.eq(next).animate({left:0},800,function(){
             flag=true;
         });
         $lis.removeClass("hot").eq(next).addClass("hot");
