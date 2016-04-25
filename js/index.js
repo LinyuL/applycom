@@ -42,8 +42,8 @@ $(function(){
             next=0;
         }
         $imgs.eq(next).css({left:$imgw});
-        $imgs.eq(now).animate({left:-$imgw},800);
-        $imgs.eq(next).animate({left:0},1000,function(){
+        $imgs.eq(now).animate({left:-$imgw},600);
+        $imgs.eq(next).animate({left:0},600,function(){
             flag=true;
         });
         $lis.removeClass("hot").eq(next).addClass("hot");
@@ -65,13 +65,13 @@ $(function(){
         flag=false;
         if(now>indexLis){
             $imgs.eq(indexLis).css({left:-$imgw});
-            $imgs.eq(now).animate({left:$imgw},800);
+            $imgs.eq(now).animate({left:$imgw},600);
         }
         if(now<indexLis){
             $imgs.eq(indexLis).css({left:$imgw});
-            $imgs.eq(now).animate({left:-$imgw},800);
+            $imgs.eq(now).animate({left:-$imgw},600);
         }
-        $imgs.eq(indexLis).animate({left:0},800,function(){
+        $imgs.eq(indexLis).animate({left:0},600,function(){
             flag=true;
         });
         $lis.removeClass("hot").eq(indexLis).addClass("hot");
@@ -93,8 +93,8 @@ $(function(){
             next=$imgs.length-1;
         }
         $imgs.eq(next).css({left:-$imgw});
-        $imgs.eq(now).animate({left:$imgw},800);
-        $imgs.eq(next).animate({left:0},800,function(){
+        $imgs.eq(now).animate({left:$imgw},600);
+        $imgs.eq(next).animate({left:0},600,function(){
             flag=true;
         });
         $lis.removeClass("hot").eq(next).addClass("hot");
