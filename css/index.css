@@ -469,6 +469,8 @@
   color: #999;
   height: 20px;
   margin-bottom: 5px;
+  height: auto;
+  overflow: hidden;
 }
 .xq-box .xq-inner .xq-midden .midden-legal .legal-copy {
   font-size: 12px;
